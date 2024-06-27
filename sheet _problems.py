@@ -9,8 +9,7 @@ def type_of_number(x):
 x=int(input("enter the number").strip())
 result=type_of_number(x)  
 print (result)
-
-         
+       
 #Q2
 # Given a string, you have to return a string in which each character (case-sensitive) is
 #repeated once.
@@ -27,15 +26,15 @@ print(result)
 #Example [1,-4,7,12] => 1 + 7 + 12 = 20
 #Note: if there is nothing to sum, the sum is default to 0 .
 def new_poitive_numbers(numbers):
-    #positive_numbers=[]
+    positive_numbers=[]
     numbers=[1,-4,7,12]
     for num in numbers:
-      #  if num>=0:
-          #  positive_numbers.append(num)
-       # elif num<=0:
-       #     result=0      
-    #result=sum(positive_numbers) 
-   # return result
+        if num>=0:
+            positive_numbers.append(num)
+        elif num<=0:
+            result=0      
+    result=sum(positive_numbers) 
+    return result
 result=new_poitive_numbers([1,-4,7,12])
 print(result)
 #Q4  In this simple assignment you are given a number and have to make it negative. But
@@ -137,13 +136,15 @@ else:
     print(False) 
 #q12 For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs
 def vowels_removing(sentence):
-    sentence="i have two brothers"
-    v=["a","i","o","u","e"]
+    #sentence="i have two brothers"
+    new_sentence=" "
+    v=["a","i","o","u","e","A","E","O","U","I"]
     for h in sentence:
-        if h in v:
-            new_sentence=sentence.replace(h, "")
-        return(new_sentence)
-sentence="i have two brothers"
+     # print(h)
+        if h  not in v:
+            new_sentence+=h
+    return (new_sentence)
+sentence=input("enter the sentence").strip()
 result=vowels_removing(sentence)
 print(result)
 #Q13  In this little assignment you are given a string of space separated numbers, and have to
@@ -200,6 +201,99 @@ for i in example:
      print(True)
   elif i<=0:
     print(False)  
+#q19 
+def triangle_side(triangle_sides):
+    absolute=[]
+    #triangle_sides=(input("enter the number"))
+    for i in triangle_sides.split(","):
+        if int(i) >0:
+            absolute.append(i)
+    print(absolute)
+    lenght=len(absolute)
+    print(lenght)
+    if lenght==3:
+        print(True)
+    elif lenght<=3:
+        print(False)
+triangle_sides=(input("enter the number"))         
+result=triangle_side(triangle_sides)
+print(result)
+#q20
+name=input("input the word:")
+for i in name:
+    repeated =name.count(i)
+print(repeated)
+if repeated>0:
+  print(False)
+else:
+  print(True) 
+  #q21
+  joden=""
+name=input("enter not jaden_cased")
+name2=name.split()
+#print(name2)
+for i in name2:
+  capital=i.capitalize()
+  joden+=" "+ capital
+print(joden)
+q22
+
+#q22##import math
+#result=math.sqrt(4)
+#print(result)
+
+number=int (input("enter the number"))
+result1=int(number**0.5)
+result2=float(number**0.5)
+print(result1)
+print(result2)
+if result1==result2:
+  print(True)
+else:
+  print(False)  
+
+  #q23
+def lowest_positive(number):
+    #number=[3,4,6,90.50]
+    number.sort()
+    print(number)
+    total=sum(number[ :2])
+    return total
+number= [4,5,87,90]
+two_lowest_positive_number=lowest_positive(number)
+print(two_lowest_positive_number)
+#q24
+def odd_numbers_of_times(list1):
+    #list1=[1,2,2,3,3,3,4,3,1,4,7]
+    for i in list1:
+        my_list=list1.count(i)
+        if my_list%2==1:
+       # print("it is an odd number")
+            return(i)  
+result=odd_numbers_of_times(list1=[1,2,3,1,2,3,4])   
+print(result)  
+          #q25 part 1
+def reverse_string(word):
+    new=(word.upper())
+    return(new[ : :-1])
+result=reverse_string(word=input("enter the example"))
+print(result)
+#q25 part 2
+def mirror(ex):
+    ex="water"
+    new=ex.upper()
+    mirror=new[ : :-1]
+    return(mirror+new)
+result=mirror(ex="water")    
+print(result)
+
+
+
+
+  
+
+
+
 
   
 

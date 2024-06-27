@@ -27,8 +27,18 @@
 #creat adict of 3 values
 #student1=['name':'mona' ,'age':"34" ,"sallary":'76533655']
 #last question in part 1
-numbers=[2,4,6,8,10]
-print("right") if 4 in numbers else print()
-print('good') if 4 and 6 in numbers else print()
-print("any one") if 3 or 6 in numbers else print()
-print("any of them") if 2 and 4 and 5 in numbers else print ()
+#numbers=[2,4,6,8,10]
+#print("right") if 4 in numbers else print()
+#print('good') if 4 and 6 in numbers else print()
+#print("any one") if 3 or 6 in numbers else print()
+##print("any of them") if 2 and 4 and 5 in numbers else print ()
+def vowels_removing(sentence):
+    sentence="i have two brothers"
+    v=["a","i","o","u","e"]
+    for h in sentence:
+        if h in v:
+            new_sentence=sentence.replace(h, "")
+    return(new_sentence)
+sentence="i have two brothers"
+result=vowels_removing(sentence)
+print(result)
