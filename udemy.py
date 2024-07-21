@@ -14,3 +14,4 @@ def cart( **kwargs):
     y=kwargs['price']
     print(f'course is {x} and its price after sale is {y}')
 cart(course_name='machin learning',price=300,email='momom',password=1234555)    
+
